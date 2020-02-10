@@ -18,7 +18,7 @@ const indexRoutes = require("./routes/index");
 
 /* seedDB(); */
 
-//set up mongodb
+//set up mongodb (DATABASEURL exported from CL, custom on heroku settings)
 mongoose.connect(process.env.DATABASEURL, {
     useUnifiedTopology: true,
     useNewUrlParser: true,
