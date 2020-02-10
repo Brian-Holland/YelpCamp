@@ -19,11 +19,15 @@ const indexRoutes = require("./routes/index");
 /* seedDB(); */
 
 //set up mongodb
-mongoose.connect(process.env.DATABASSEURL || "mongodb://localhost/yelp_camp", {
-    useUnifiedTopology: true,
-    useNewUrlParser: true,
-    useCreateIndex: true
-});
+mongoose.connect(
+    "mongodb+srv://yelpcamp_db_user:yelpcamppassword@cluster0-hb7wc.mongodb.net/test?retryWrites=true&w=majority" ||
+        "mongodb://localhost/yelp_camp",
+    {
+        useUnifiedTopology: true,
+        useNewUrlParser: true,
+        useCreateIndex: true
+    }
+);
 
 app.use(bodyParser.urlencoded({ extended: true }));
 app.set("view engine", "ejs");
