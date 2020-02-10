@@ -19,7 +19,7 @@ const indexRoutes = require("./routes/index");
 /* seedDB(); */
 
 //set up mongodb
-mongoose.connect("mongodb://localhost/yelp_camp", {
+mongoose.connect(process.env.DATABASSEURL || "mongodb://localhost/yelp_camp", {
     useUnifiedTopology: true,
     useNewUrlParser: true,
     useCreateIndex: true
