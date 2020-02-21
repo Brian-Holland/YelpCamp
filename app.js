@@ -19,7 +19,7 @@ const indexRoutes = require("./routes/index");
 /* seedDB(); */
 
 //set up mongodb (DATABASEURL exported from CL, custom on heroku settings)
-mongoose.connect(process.env.DATABASEURL, {
+mongoose.connect(process.env.DATABASEURL || "mongodb://localhost/YelpCamp", {
     useUnifiedTopology: true,
     useNewUrlParser: true,
     useCreateIndex: true

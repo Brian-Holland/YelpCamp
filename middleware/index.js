@@ -64,6 +64,14 @@ const middlewareObj = {
         }
         req.flash("error", "You need to be logged in to do that!");
         res.redirect("/login");
+    },
+    isAdmin: (req, res, next) => {
+        if (req.user.isAdmin) {
+            next();
+        } else {
+            req.flash("error");
+            res.redirect("back");
+        }
     }
 };
 
