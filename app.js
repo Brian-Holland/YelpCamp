@@ -16,7 +16,7 @@ const commentRoutes = require("./routes/comments");
 const campgroundRoutes = require("./routes/campgrounds");
 const indexRoutes = require("./routes/index");
 
-/* seedDB(); */
+
 
 //set up mongodb (DATABASEURL exported from CL, custom on heroku settings)
 mongoose.connect(process.env.DATABASEURL || "mongodb://localhost/YelpCamp", {
