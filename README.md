@@ -6,6 +6,16 @@ Allows users to review and comment on campgrounds. Each user account can create,
 
 ![yelp camp preview image](app_pic.png)
 
+### Built Using
+* HTML
+* CSS
+  * Bootstrap 4
+* JavaScript
+* Express
+* MongoDB
+  * Mongoose
+* Node
+
 ### Features
 * User account creation and authentication
 * User sessions
